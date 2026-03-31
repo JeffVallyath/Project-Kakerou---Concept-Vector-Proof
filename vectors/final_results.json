@@ -1,0 +1,44 @@
+{
+  "model": "Qwen/Qwen3-4B",
+  "dataset": "261 contrast pairs (extended from 80)",
+  "methodology": "Zou et al. (2023) RepE + Burns et al. (2022) ELK",
+  "probe_validation": {
+    "evasive_deflection": {
+      "pairs": 77,
+      "best_layer": 18,
+      "cv_accuracy": "98.7% \u00b11.6%",
+      "ood_accuracy": "100% (16/16)"
+    },
+    "defensive_justification": {
+      "pairs": 61,
+      "best_layer": 19,
+      "cv_accuracy": "92.7% \u00b17.8%",
+      "ood_accuracy": "64.3% (9/14)"
+    },
+    "emotional_intensity": {
+      "pairs": 56,
+      "best_layer": 18,
+      "cv_accuracy": "97.3% \u00b15.5%",
+      "ood_accuracy": "100% (12/12)"
+    },
+    "deception_indicator": {
+      "pairs": 67,
+      "best_layer": 16,
+      "cv_accuracy": "91.8% \u00b11.5%",
+      "ood_accuracy": "100% (8/8)"
+    }
+  },
+  "steering_proof": {
+    "evasive_deflection": "Baseline: specific detail -> Steered: vague, noncommittal (\"I don't know why\")",
+    "deception_indicator": "Baseline: straightforward -> Steered: added suspicion/confusion",
+    "emotional_intensity": "Baseline: neutral tone -> Steered: \"very strange\" repeated, heightened affect"
+  },
+  "key_findings": [
+    "Deception probe improved from 66.7% (20 pairs) to 91.8% (67 pairs, 5-fold CV)",
+    "Best layers are differentiated: L16 (deception), L18 (evasion, emotion), L19 (defense)",
+    "Deception lives in later layers (16-19) consistent with higher-order cognition",
+    "Evasion and emotion show near-perfect OOD generalization",
+    "Defensive probe has weaker OOD (64.3%) \u2014 may conflate surface features with concept",
+    "Steering produces directionally correct behavioral shifts on all tested signals"
+  ]
+}

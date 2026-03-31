@@ -1,0 +1,30 @@
+{
+  "evasive_deflection": {
+    "vector_file": "vectors\\evasive_deflection_vector.pt",
+    "best_layer": 18,
+    "test_accuracy": 0.9868817204301076,
+    "hidden_dim": 2560,
+    "method": "mean_diff"
+  },
+  "defensive_justification": {
+    "vector_file": "vectors\\defensive_justification_vector.pt",
+    "best_layer": 19,
+    "test_accuracy": 0.9266666666666665,
+    "hidden_dim": 2560,
+    "method": "mean_diff"
+  },
+  "emotional_intensity": {
+    "vector_file": "vectors\\emotional_intensity_vector.pt",
+    "best_layer": 18,
+    "test_accuracy": 0.9727272727272727,
+    "hidden_dim": 2560,
+    "method": "mean_diff"
+  },
+  "deception_indicator": {
+    "vector_file": "vectors\\deception_indicator_vector.pt",
+    "best_layer": 16,
+    "test_accuracy": 0.9179487179487179,
+    "hidden_dim": 2560,
+    "method": "mean_diff"
+  }
+}
